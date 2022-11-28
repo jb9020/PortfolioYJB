@@ -1,0 +1,1127 @@
+@charset "utf-8";
+
+@import url(reset.css);
+
+body{
+  /* cursor: none; */
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ******************* 레이아웃 구성시작 **************** */
+#mainview{ width: 100%; height: 100vh; } 
+#map{ height: 350px; }
+#footer{ height: 252px; }
+
+.container{  width: 100%; padding: 105px; }
+ 
+/* ******************* 공통영역 선언시작 **************** */
+h1, h2, h3, h4, h5, h6{ margin: 0; }
+
+/* Title */
+.title{
+  height: auto;
+  margin-bottom: 48px;
+  text-align: center;
+}
+ .title h2{
+  height: 63px;
+  font: 700 3.6rem/42px 'Raleway', sans-serif;
+  margin-bottom: 42px;
+  position: relative;
+ }
+
+ /* 마우스 커서 효과 */
+/* .carousel {
+  width: 100%;
+  height: 60vh;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#mouse-cursor {
+  position: absolute;
+  top:0;
+  left: 0;
+  will-change: transform;
+  transform: translate3d(-100%, -100%, 0);
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+#mouse-cursor > div {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #7e7e7e;
+  font-size: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --cursor-scale: 1;
+  transform: scale3d(var(--cursor-scale), var(--cursor-scale), 1);
+  will-change: transform;
+  transition: transform 150ms ease-in-out,
+              background-color 150ms ease-in-out;
+}
+
+#mouse-cursor > div::after {
+  content: attr(data-name);
+  position: absolute;
+  color: #fff;
+  transform: scale(0.45);
+  white-space: nowrap;
+}
+
+.cursor-text-mode {
+  mix-blend-mode: initial !important;
+}
+
+.cursor-text-mode > div {
+  background-color: #7e7e7e !important;
+  color: #7e7e7e !important;
+} */
+
+ 
+/* ******************* 개별영역 선언시작 **************** */
+
+/* ********** header Start ********** */
+ #header{
+  width: 100%;
+  height: 63px;
+  border: 0;
+  background-color: transparent;
+  position: fixed;
+  z-index: 99999;
+}
+.header_cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.header_cont .header_logo {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  margin-left: 5%;
+}
+.header_cont .header_logo h2 a {
+  font: 500 2.2rem/21px 'Raleway',sans-serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+#gnb { 
+  display: flex;
+  margin-right: 2%;
+}
+#gnb ul{
+  display: flex;
+  height: 100%;
+}
+#gnb ul li {
+  display: flex;
+  padding: 0 20px 0 20px;
+}
+#gnb ul li a {
+  font: 400 1.6rem/21px 'Roboto', sans-serif;
+  color: #fff;
+}
+#gnb ul li a:hover{
+  color: #1a1a1a !important;
+}
+#gnb .mobile_menu {
+  display: none;
+}
+#gnb .mobile_menu a i {
+  font-size: 30px;
+  color: #fff;
+}
+
+.popup_menubar {
+  width: 100%;
+  height: 30vh;
+  position: fixed;
+  background-color: rgba(26,26,26,0.5);
+  display: none;
+}
+.popup_menubar.none {
+  display: block;
+}
+.popup_menubar ul {
+  height: 100%;
+}
+.popup_menubar ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16.5%;
+  padding: 0 10% 0 10%;
+  text-align: center;
+}
+.popup_menubar ul li a {
+  width: 100%;
+  height: 100%;
+  padding-top: 2.5%;
+  font: 700 1.6rem/21px 'Roboto', sans-serif;
+  color: #fff;
+}
+.popup_menubar ul li a:hover {
+  background-color: rgba(26,26,26,0.5);
+  border-radius: 15px;
+  color: #fff;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+
+}
+
+
+
+/* #header h2, #header #gnb{ height: 100%; }
+#header h2 a, #header #gnb a{
+  padding: 21px 0;
+  color: #fff;
+  height: 100%;
+  text-decoration: none;
+}
+
+Logo
+#header h2 a{
+  position: relative;
+  float: left;
+  font: 500 2.2rem/21px 'Raleway',sans-serif;
+}
+
+Gnb
+#header #gnb a{
+  height: 100%;
+  padding: 21px 15px;
+  position: relative; right: -40%;
+  float: left;
+  font: 400 1.6rem/21px 'Roboto', sans-serif;
+}
+#header #gnb a:hover{
+  color: #1a1a1a;
+} */
+
+
+
+/* header 활성화 */
+.act{
+  background-color: rgba(26,26,26,0.5) !important;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+.act h2, .act h2 a, .act #gnb a{
+  color:#fff !important;
+}
+.act #gnb a:hover{
+  color: #1a1a1a !important;
+}
+
+
+/* ********** Mainview Start ********** */
+#mainview{
+  background: url(../images/1200gs/mainview.png) no-repeat top center / cover;
+ }
+#mainview .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+}
+#mainview .mainview-content{
+  width: 900px;
+  height: 168px;
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+  position: absolute; left: 50%; top: 50%;
+  
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+#mainview .mainview-content h1{
+  height: 168px;
+  margin-bottom: 150px;
+  font: 900 10rem/1.6 'Raleway', sans-serif;
+}
+#mainview a{
+  color: #fff;
+  font-size: 18px;
+}
+#mainview a i {
+  animation: move-chevron 2s infinite ease-in-out;
+}
+@keyframes move-chevron {
+  0% {
+    margin-top: 0;
+   }
+  50% {
+    margin-top: 25px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+
+
+/* #mainview .mainview-content a i{
+  animation: motion 0.3s linear 0s infinite alternate;
+}
+@keyframes motion {
+  0% {margin-top: 0px;}
+  100% {margin-top: 10px;}
+} */
+
+#particles-js{ position:absolute; width: 100%; height: 100%; background-color: transparent; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } 
+
+
+/* ********** About Start ********** */
+
+/* text-box */
+#about .content{ margin-bottom: 84px; }
+#about .text-box{ padding-right: 0; }
+#about .text-box h3{
+  font: 700 2.2rem/36px 'NexonLv1Gothic';
+  text-align: left;
+  margin-bottom: 42px;
+}
+#about .text-box p{
+  font: 400 1.5rem/24px 'NexonLv1Gothic';
+  text-align: left;
+  margin-right: 105px;
+}
+/* img-box */
+#about .img-box img{
+  width: 470px;
+  height: 294px;
+}
+
+/* strength */
+.title h3{
+  font: 600 3rem/36px 'Raleway', sans-serif;
+}
+#about .content .s1{
+  width: 100%;
+  height: 347px;
+  padding: 42px 21px;
+  border-radius: 15px;
+  text-align: center;
+  background-color: #f5f5f5;
+  margin-bottom: 21px;
+}
+#about .content .s1:hover{
+  background-color: #7e7e7e;
+  color: #fff;
+  font-style: italic;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+
+}
+
+#about .content .s1 img{
+  
+}
+#about .content .s1 h4{
+  font: 700 2rem/36px 'Raleway', sans-serif;
+  margin: 21px 0;
+}
+#about .content .s1 p{
+  font: 400 1.5rem/21px 'NexonLv1Gothic';
+}
+
+
+/* ********** Skills Start ********** */
+#skills{ background-color: #f5f5f5; color: #1a1a1a; }
+#skills .skill-box1{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 105px;
+  text-align: center;
+}
+#skills .skill-box2{
+  text-align: center;
+}
+#skills .skill-box1 h3,
+#skills .skill-box2 h3{
+  font: 600 2.4rem/21px 'Raleway', sans-serif;
+  margin-bottom: 63px;
+}
+#skills .skill-box1 .skill-bar,
+#skills .skill-box2 .skill-bar{
+}
+#skills .skill-box1 .skill-bar p,
+#skills .skill-box2 .skill-bar p{
+  font: 600 1.6rem/24px 'NexonLv1Gothic', sans-serif;
+  margin-bottom: 21px;
+}
+#skills .skill-box1 .skill-bar .circle,
+#skills .skill-box2 .skill-bar .circle{
+  position: relative;
+}
+#skills .skill-box1 .skill-bar .circle strong{
+  font: 400 1.6rem 'NexonLv1Gothic', sans-serif;
+  position: absolute; left: 50%; top: 50%;
+  
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+#skills .skill-box2 .skill-bar .circle strong{
+  font: 400 1.6rem 'NexonLv1Gothic', sans-serif;
+  position: absolute; left: 50%; top: 50%;
+  
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+
+/* ********** Banner Start ********** */
+#banner{
+  background: url(../images/1200gs/banner.png) no-repeat top center / cover;
+  width: 100%;
+  height: 60%;
+  text-align: center;
+}
+#banner .title h2{
+  font: 700 5rem 'Raleway', sans-serif;
+  color: #fff;
+}
+#banner .title p{
+  font: 400 2rem 'Raleway', sans-serif;
+  color: #fff;
+}
+#banner .title i{
+  font-size: 75px;
+  line-height: 230px;
+  color: #fff;
+}
+/* Popup Button */
+#banner #popup_btn{
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#banner #popup_btn:hover{ color: #1a1a1a; }
+
+#banner .fa-play-circle-o:hover{
+  color: #1a1a1a;
+}
+
+
+
+/* ********** Whatido Start ********** */
+#whatido{ background-color: #f5f5f5; color: #1a1a1a; }
+
+#whatido .content{}
+#whatido .content .w1{
+  width: 100%;
+  height: 350px;
+  padding: 21px;
+  margin-bottom: 21px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #fff;
+}
+#whatido .content .w1:hover{
+  background-color: #7e7e7e;
+  color: #fff;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+
+#whatido .content .w1 img{}
+#whatido .content .w1 h4{
+  font: 600 1.8rem/21px 'Raleway', sans-serif;
+  margin: 30px 0;
+}
+#whatido .content .w1 p{
+  font: 400 1.4rem/24px 'NexonLv1Gothic', sans-serif;
+}
+
+
+/* ********** Works Start ********** */
+#works{
+  position: relative;
+  color: #1a1a1a;
+}
+#works h2{
+  margin-bottom: 21px;
+}
+#works .title{
+  margin-bottom: 21px;
+}
+
+/* g-menu */
+#works .g-menu{
+  height: 42px;
+  text-align: center;
+}
+#works .g-menu li{
+  display: inline-block;
+  width: 80px;
+  height: 34px;
+}
+#works .g-menu li a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  font: 600 1.4rem/34px 'Raleway', sans-serif;
+}
+#works .g-menu li a:hover{
+  border-radius: 20px;
+  background-color: #7e7e7e;
+  color: #fff;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+
+/* Gallery */
+#works #gallery{
+  width: 100%;
+}
+#works #gallery .grid-item{  
+  width: calc(100% / 3);
+}
+#works #gallery .grid-item{
+  width: 31.3%;
+  margin-bottom: 21px;
+  position: relative;
+}
+#works #gallery .grid-item img{
+  overflow:hidden;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+#works #gallery .grid-item .caption{
+  width: 96%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 5px;
+  position: absolute; left:8px; top:0;
+  opacity: 0;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+#works #gallery .grid-item a:hover .caption{
+  opacity: 1;
+}
+#works #gallery .caption h3{
+  font: 800 2rem 'Raleway', sans-serif;
+}
+#works #gallery .caption span{
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ********** Contact Start ********** */
+#contact{ background-color: #f5f5f5; color: #1a1a1a; }
+#contact .container .content{
+  text-align: center;
+  padding: 0 20px 0;
+}
+#contact .container .content .c1{
+  width: 30%;
+  height: 294px;
+  background-color: #fff;
+  margin-left: 26px;
+  margin-bottom: 63px;
+  border-radius: 20px;
+  padding: 42px;
+}
+#contact .container .content .c1:hover{
+  background-color: #7e7e7e;
+  color: #fff;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+#contact .container .content .c1 img{}
+#contact .container .content .c1 h3{
+  margin: 21px 0;
+  font: 600 2rem/24px 'Raleway', sans-serif;
+}
+#contact .container .content .c1 p{
+  font: 400 1.6rem/24px 'NexonLv1Gothic';
+}
+#contact .container .content .map{
+  width: 50%;
+  padding-left: 27px;
+}
+#contact .container .content .form{
+  padding-left: 20px;
+}
+#contact .container .content .input-field{
+  width: 78%;
+  margin-top: 0;
+}
+#contact .container .content .map iframe{
+  width: 100%;
+}
+#contact .container .content .submit_btn{
+  text-align: center;
+}
+#contact .container .content .submit_btn .send{
+  width: 192px;
+  height: 42px;
+  border: 1px solid #9e9e9e;
+  border-radius: 10px;
+  font: 1.6rem 'aArial', Helvetica sans-serif;
+  color: #9e9e9e;
+}
+#contact .container .content .submit_btn .send:hover{
+  background-color: #7e7e7e;
+  border-radius: 30px;
+  color: #fff;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+
+
+/* ********** Footer Start ********** */
+#footer{
+  height: 63px;
+  background-color: #000; 
+  color: #fff; 
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 400 1rem 'Roboto','sans-serif';
+}
+#footer .container{
+  padding: 0;
+}
+
+/* ********************* Desktop Area Start ********************** */
+@media screen and (max-width: 1200px) {
+  
+  /* *************** Header Start *************** */
+  .header_cont .header_logo h2 a{
+    font-size: 2rem;
+  }
+  #gnb ul li {
+    padding: 0 10px 0 10px;
+  }
+  #gnb ul li a {
+    font: 400 1.5rem/21px 'Roboto', sans-serif;
+  }
+
+
+  /* *************** About Start *************** */
+  /* text-box */
+  #about .text-box p{
+  font-size: 1.4rem;
+  margin: 0;
+  margin-bottom: 21px;
+  }
+  /* img-box */
+  #about .img-box img{
+    width: 100%;
+    height: 294px;
+  }
+
+  /* strength */
+  .title h3{
+  font: 600 3rem/36px 'Raleway', sans-serif;
+  }
+  #about .content .s1{
+  width: 100%;
+  height: 347px;
+  padding: 42px 21px;
+  border-radius: 15px;
+  text-align: center;
+  background-color: #f5f5f5;
+  margin-bottom: 21px;
+  }
+  #about .content .s1:hover{
+  background-color: #7e7e7e;
+  color: #fff;
+  font-style: italic;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+
+  }
+
+  #about .content .s1 h4{
+  font-size: 2rem;
+  }
+  #about .content .s1 p{
+  font: 400 1.4rem/21px 'NexonLv1Gothic';
+  }
+
+
+  /* *************** Skills Start *************** */
+  #skills .skill-box1{
+    margin-bottom: 84px;
+  }
+  #skills .skill-box1 .skill-bar .circle{
+    margin-bottom: 36px;
+  }
+  #skills .skill-box2 .skill-bar .circle{
+    margin-bottom: 36px;
+  }
+
+
+  /* *************** Works Start *************** */
+  #works #gallery .grid-item{
+    width: 50%;
+    margin-bottom: 21px;
+    position: relative;
+  }
+  #works #gallery .grid-item .caption{
+    width: 96.5%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute; left:8px; top:0;
+    opacity: 0;
+  }
+  
+  
+  
+  /* *************** Contact Start *************** */
+  #contact .container .content{
+    text-align: center;
+    padding: 0;
+  }
+
+  #contact .container .content .c1 {
+    width: 30%;
+    height: 294px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 21px;
+    margin-bottom: 63px;
+    border-radius: 20px;
+    padding: 42px;
+  }
+  #contact .container .content .c1 p {
+    font: 400 1.5rem / 24px NexonLv1Gothic;
+  }
+  
+  #contact .container .content .map{
+    width: 100%;
+    margin-bottom: 42px;
+  }
+  #contact .container .content .form{
+    /* padding-left: 27px; */
+  }
+  
+  #contact .container .content .input-field{
+    width: 100%;
+    margin: 0;
+  }
+
+}
+
+/* @media only screen and (min-width: 991px){
+
+  .container{
+    width: 100%;
+  }
+} */
+/* ********************* Tablet Area Start ********************** */
+@media screen and (max-width: 992px){
+
+  /* *************** Mainview Start *************** */
+  #mainview{
+    width: 100%;
+    height: 100%;
+    background: url(../images/768gs/mainview.png)no-repeat top center / cover;
+  }
+
+  #mainview .mainview-content h1{
+    font-size: 8rem;
+  }
+  #particles-js{ position:absolute; left: 100px; width: 8%2; height: 85%; background-color: transparent; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 100% 50%; } 
+
+
+  /* *************** About Start *************** */
+  /* text-box */
+  #about .text-box h3{
+  font-size: 2.2rem;
+  text-align: center;
+  }
+  #about .text-box p{
+  font-size: 1.4rem;
+  text-align: center;
+  }
+  /* img-box */
+  #about .img-box{ height: 100%; }
+  #about .img-box img{
+    width: 100%;
+    height: auto;
+    margin-top: 63px;
+  }
+
+  /* strength */
+  .title h3{
+  font: 600 3rem/36px 'Raleway', sans-serif;
+  }
+  #about .content .s1{
+  width: 100%;
+  height: 347px;
+  padding: 42px 21px;
+  border-radius: 15px;
+  text-align: center;
+  background-color: #f5f5f5;
+  margin-bottom: 21px;
+  }
+  #about .content .s1:hover{
+  background-color: #7e7e7e;
+  color: #fff;
+  font-style: italic;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+
+  }
+
+  #about .content .s1 h4{
+  font-size: 2rem;
+  }
+  #about .content .s1 p{
+  font: 400 1.4rem/21px 'NexonLv1Gothic';
+  }
+
+
+  /* *************** Skills Start *************** */
+
+
+  /* *************** Works Start *************** */
+  #works #gallery .grid-item{
+    width: 50%;
+    margin-bottom: 21px;
+    position: relative;
+  }
+  #works #gallery .grid-item .caption{
+    width: 95.5%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute; left:7px; top:0;
+    opacity: 0;
+  }
+
+
+  /* *************** Contact Start *************** */
+  
+  #contact .container .content{
+    padding: 0;
+  }
+  #contact .container .content .c1{
+    width: 47%;
+    height: 294px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 63px;
+    margin-left: 18px;
+  }
+  #contact .container .content .m12{
+    margin-top: -36px;  
+  }
+  #contact .container .content .map{
+    margin-bottom: 42px;
+    width: 100%;
+    padding: 0;
+  }
+  #contact .container .content .form{
+    padding: 0;
+  }
+  #contact .container .content .input-field{
+    width: 100%;
+    margin: 0;
+  }
+  
+}
+
+
+/* *************** Footer Start *************** */
+#footer .container p{
+  font-size: 1.3rem;
+}
+
+
+/* ********************* Tablet Area Start ********************** */
+@media screen and (max-width: 767px){
+  .container{ padding: 105px 20px; }
+  #header{
+    background-color: rgba(26,26,26,0.5);
+  }
+  .header_cont .header_logo h2 a {
+    font: 500 2rem/21px 'Raleway',sans-serif;
+    width: 120px;
+  }
+  
+  #gnb ul { 
+    display: none;
+  }
+  #gnb .mobile_menu {
+    display: block;
+  }
+  /* *************** Mainview Start *************** */
+  #mainview{
+    width: 100%;
+    height: 100%;
+    background: url(../images/768gs/mainview.png)no-repeat top center / cover;
+  }
+
+  #mainview .mainview-content h1{
+    font-size: 5rem;
+  }
+  #particles-js{ position:absolute; left: 215px; width: 52%; height: 52%; background-color: transparent; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } 
+
+
+
+  /* *************** About Start *************** */
+  /* text-box */
+  #about .text-box h3{
+  font-size: 2rem;
+  text-align: center;
+  }
+  #about .text-box p{
+  font-size: 1.4rem;
+  }
+  /* img-box */
+  #about .img-box{ height: 100%; }
+  #about .img-box img{
+    width: 100%;
+    height: 100%;
+  }
+  #about .content .s1 h4{
+    font-size: 1.8rem;
+  }
+  #about .content .s1 p{
+    font-size: 1.3rem;
+  }
+  
+  
+  /* *************** Banner Start *************** */
+  #banner .title h2{
+    font: 700 3.5rem 'Raleway', sans-serif;
+    color: #fff;
+  }
+  #banner .title p{
+    font: 400 1.8rem 'Raleway', sans-serif;
+    color: #fff;
+  }
+  #banner .title i{
+    font-size: 5rem;
+    line-height: 230px;
+    margin-top: 50px;
+    color: #fff;
+  }
+  
+
+  /* *************** Works Start *************** */
+  #whatido .content .w1 p{
+    font-size: 1.3rem;
+  }
+
+
+  /* *************** Works Start *************** */
+  #works #gallery .grid-item{
+    width: 100%;
+    margin-bottom: 21px;
+    position: relative;
+  }
+  #works #gallery .grid-item .caption{
+    width: 96.7%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute; left:8px; top:0;
+    opacity: 0;
+  }
+  
+
+  /* *************** Contact Start *************** */
+  #contact .container .content .c1{
+    width: 100%;
+    margin-left: 0;
+  }
+  #contact .container .content .m12{
+    margin-top: 0;  
+  }
+  
+  /* *************** Footer Start *************** */
+  #footer .container p{
+    font-size: 1.2rem;
+  }
+
+}
+
+/* ********************* Mobile Area Start ********************** */
+@media screen and (max-width: 480px){
+
+  /* 공통영역 선언 */
+  .container{
+    padding: 84px 21px;
+  }
+
+
+  .header_cont .header_logo h2 a {
+    font: 500 1.4rem/21px 'Raleway',sans-serif;
+    width: 80px;
+  }
+  #gnb .mobile_menu a i {
+    font-size: 15px;
+    margin-right: 10px;
+    color: #fff;
+  }  
+  
+  /* *************** Mainview Start *************** */
+
+  #mainview .mainview-content h1{
+    font-size: 4rem;
+  }
+  #particles-js{ position:absolute; left: 265px; width: 40%; height: 40%; background-color: transparent; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } 
+
+
+
+  /* *************** About Start *************** */
+
+  /* text-box */    
+  #about .text-box h3{
+  font-size: 1.9rem;
+  text-align: center;
+  }
+  #about .text-box p{
+  font-size: 1.3rem;
+  }
+  /* img-box */
+  #about .img-box{ height: 100%; }
+  #about .img-box img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  /* *************** Banner Start *************** */
+  #banner .title h2{
+    font: 700 3rem 'Raleway', sans-serif;
+    color: #fff;
+  }
+  #banner .title p{
+    font: 400 1.6rem 'Raleway', sans-serif;
+    color: #fff;
+  }
+  #banner .title i{
+    font-size: 4.5rem;
+    line-height: 140px;
+    margin-top: 100px;
+    color: #fff;
+  }
+  
+  /* *************** Works Start *************** */
+  #works{
+    position: relative;
+    color: #1a1a1a;
+  }
+  #works h2{
+    margin-bottom: 21px;
+  }
+  #works .title{
+    margin-bottom: 21px;
+  }
+  
+  /* g-menu */
+  #works .g-menu{
+    height: 42px;
+    text-align: center;
+  }
+  #works .g-menu li{
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  #works .g-menu li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font: 600 1.2rem/34px 'Raleway', sans-serif;
+  }
+  #works .g-menu li a:hover{
+    border-radius: 20px;
+    background-color: #7e7e7e;
+    color: #fff;
+    -webkit-transition: all ease 0.8s;
+    -moz-transition: all ease 0.8s;
+    -o-transition: all ease 0.8s;
+    transition: all ease 0.8s;
+  }
+  
+  #works #gallery .grid-item{
+    width: 100%;
+    margin-bottom: 21px;
+    position: relative;
+  }
+    
+
+  /* *************** Footer Start *************** */
+  #footer .container p{
+    font-size: 1rem;
+  }
+
+  
+
+}
+
+
+
+
+
+
+
